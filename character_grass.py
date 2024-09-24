@@ -6,10 +6,11 @@ open_canvas()
 grass = load_image('grass.png')
 boy = load_image('character.png')
 
+
 def draw_boy(x,y):
     clear_canvas_now()
     boy.draw_now(x,y)
-    delay(0.1)
+    delay(0.01)
 
 def run_circle():
     print('CIRCLE')
@@ -26,26 +27,30 @@ def run_circle():
 
         clear_canvas_now()
         boy.draw_now(x,y)
-        delay(0.1)
+        delay(0.01)
     
 
     pass ## 아무기능이 없는 빈 함수
 
 def run_top():
     print('TOP')
-    for x in range(0,800,10):
+    for x in range(0,750,10):
         draw_boy(x,550)
     pass
 def run_right():
     print('RIGHT')
-    for y in range(550,0,-10):
-        draw_boy(790,y)
+    for y in range(550,50,-10):
+        draw_boy(750,y)
     pass
 def run_bottom():
     print('BOTTOM')
+    for x in range(750,50,-10):
+        draw_boy(x,50)
     pass
 def run_left():
     print('LEFT')
+    for y in range(50,550,10):
+        draw_boy(50,y)
     pass
 
 def run_rectangle():
@@ -61,7 +66,7 @@ def run_rectangle():
 #file here
 
 while True:
-    #run_circle()
+    run_circle()
     run_rectangle()
     break
     
