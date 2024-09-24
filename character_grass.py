@@ -38,6 +38,8 @@ def run_top():
     pass
 def run_right():
     print('RIGHT')
+    for y in range(550,0,-10):
+        draw_boy(790,y)
     pass
 def run_bottom():
     print('BOTTOM')
